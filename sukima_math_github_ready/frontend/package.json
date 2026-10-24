@@ -1,0 +1,25 @@
+{
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "dev:safe": "next dev",
+    "clean": "node -e \"const fs=require('fs'); for (const p of ['.next','node_modules/.cache']) if (fs.existsSync(p)) fs.rmSync(p,{recursive:true,force:true}); console.log('cleaned');\"",
+    "final:start": "npm run clean && npm run dev:safe"
+  },
+  "dependencies": {
+    "next": "^15.3.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "katex": "^0.16.11"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/katex": "^0.16.7"
+  },
+  "name": "sukima-math-frontend",
+  "private": true
+}
